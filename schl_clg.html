@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School & College Faculty | HS Tutorials</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Poppins:wght@600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="global/global.css">
+    <style>
+        :root {
+            --bg-dark: #0a0a0b;
+            --glass: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --accent-gold: #d4af37;
+            --accent-glow: rgba(212, 175, 55, 0.3);
+            --text-main: #f1f1f1;
+            --text-dim: #a0a0a0;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: var(--bg-dark); color: var(--text-main); font-family: 'Inter', sans-serif; line-height: 1.6; overflow-x: hidden; }
+
+
+        /* --- Hero Section --- */
+        .mentors-hero {
+            padding: 180px 10% 80px;
+            text-align: center;
+            background: radial-gradient(circle at top, rgba(212, 175, 55, 0.05) 0%, transparent 70%);
+        }
+        .philosophy-tag {
+            color: var(--accent-gold);
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 15px;
+        }
+        .mentors-hero h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            line-height: 1.1;
+            margin-bottom: 25px;
+            background: linear-gradient(to bottom, #fff 50%, #888);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        }
+
+        /* --- Faculty Standard Layout (Removed Z-Layout) --- */
+        .faculty-section { padding: 60px 15% 100px; }
+        
+        .mentor-row {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 50px; /* Reduced gap for cleaner vertical flow */
+            position: relative;
+            padding: 40px;
+            background: var(--glass);
+            border-radius: 30px;
+            border: 1px solid var(--glass-border);
+            text-align: left; /* Force all to left */
+            border-left: 4px solid var(--accent-gold); /* Consistent gold accent */
+        }
+
+        /* Resetting any alternating styles */
+        .mentor-row:nth-child(even) { text-align: left; border-right: 1px solid var(--glass-border); border-left: 4px solid var(--accent-gold); }
+
+        .subject {
+            color: var(--accent-gold);
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.85rem;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .mentor-content h2 { font-family: 'Poppins', sans-serif; font-size: 2.5rem; margin-bottom: 15px; }
+        .mentor-content p { color: var(--text-dim); font-size: 1.1rem; margin-bottom: 15px; line-height: 1.8; max-width: 800px; }
+        
+        /* Ensure paragraph text doesn't shift for even items */
+        .mentor-row:nth-child(even) p { margin-left: 0; }
+
+        .mentor-badges { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 10px; justify-content: flex-start; }
+        .mentor-row:nth-child(even) .mentor-badges { justify-content: flex-start; }
+        
+        .badge {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--glass-border);
+            padding: 6px 15px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            color: var(--accent-gold);
+        }
+
+        /* --- Homeroom Section --- */
+        .homeroom-section {
+            padding: 100px 10%;
+            background: rgba(255, 255, 255, 0.01);
+            border-top: 1px solid var(--glass-border);
+            text-align: center;
+        }
+        .homeroom-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 50px;
+        }
+        .homeroom-card {
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            padding: 50px 40px;
+            border-radius: 25px;
+            transition: 0.3s;
+        }
+        .homeroom-card:hover { border-color: var(--accent-gold); transform: translateY(-5px); background: rgba(212, 175, 55, 0.05); }
+        .h-icon { font-size: 2.5rem; color: var(--accent-gold); margin-bottom: 20px; }
+        .h-tag { color: var(--accent-gold); font-weight: 700; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px; margin-bottom: 10px; display: block; }
+        .homeroom-card h3 { font-family: 'Poppins', sans-serif; font-size: 1.8rem; margin-bottom: 15px; }
+        .h-desc { color: var(--text-dim); font-size: 0.95rem; }
+
+        /* --- Footer --- */
+        footer { background: #050505; padding: 80px 10% 30px; border-top: 1px solid var(--glass-border); }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 4rem; }
+        .footer-heading { font-family: 'Poppins', sans-serif; color: var(--accent-gold); margin-bottom: 25px; text-transform: uppercase; letter-spacing: 2px; }
+        .footer-links { list-style: none; }
+        .footer-links li { margin-bottom: 12px; }
+        .footer-links a { text-decoration: none; color: var(--text-dim); transition: 0.3s; }
+        .footer-links a:hover { color: var(--accent-gold); }
+
+        @media (max-width: 768px) {
+            .faculty-section { padding: 40px 5%; }
+            .homeroom-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+        /* --- School Mentors CTA --- */
+.school-mentors-cta {
+    padding: 120px 10%;
+    text-align: center;
+    background: radial-gradient(circle at center, rgba(212, 175, 55, 0.08), transparent 70%);
+    border-top: 1px solid var(--glass-border);
+}
+
+.school-mentors-cta h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 15px;
+}
+
+.school-mentors-cta h2 span {
+    color: var(--accent-gold);
+}
+
+.school-mentors-cta p {
+    color: var(--text-dim);
+    max-width: 600px;
+    margin: 0 auto 40px;
+    font-size: 1.1rem;
+}
+
+.cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 38px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #000;
+    background: var(--accent-gold);
+    border-radius: 50px;
+    transition: 0.35s ease;
+    box-shadow: 0 0 30px var(--accent-glow);
+}
+
+.cta-btn i {
+    transition: transform 0.3s ease;
+}
+
+.cta-btn:hover {
+    background: #fff;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 40px rgba(212, 175, 55, 0.4);
+}
+
+.cta-btn:hover i {
+    transform: translateX(6px);
+}
+
+    </style>
+</head>
+<body data-page="school-mentors">
+
+    <div data-include="components/nav.html"></div>
+
+    <header class="mentors-hero">
+        <span class="philosophy-tag">Foundation & Growth</span>
+        <h1>School <br><span style="color: var(--accent-gold);">Faculties.</span></h1>
+        <p style="color: var(--text-dim); max-width: 700px; margin: 0 auto; font-size: 1.2rem;">Expert educators dedicated to bridging the gap between fundamental concepts and advanced academic success.</p>
+    </header>
+
+    <section class="faculty-section">
+        
+        <div class="mentor-row">
+            <div class="mentor-content">
+                <span class="subject">Social Science Expert</span>
+                <h2>Prof. Nuzhat</h2>
+                <p>Prof. Nuzhat transforms the way students perceive Social Sciences. By integrating current affairs with historical context, she makes History and Geography engaging and easy to visualize.</p>
+                <p>Her specialized "Memory Mapping" techniques help students retain vast amounts of data effortlessly, ensuring top-tier performance in school and board examinations.</p>
+                <div class="mentor-badges">
+                    <span class="badge">Board Specialist</span>
+                    <span class="badge">Conceptual Learning</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="mentor-row">
+            <div class="mentor-content">
+                <span class="subject">Mathematics (Geometry)</span>
+                <h2>Prof. Umera</h2>
+                <p>Geometry is often seen as a challenge, but Prof. Umera turns it into a logical art form. She focuses heavily on theorem visualization and construction accuracy.</p>
+                <p>Her approach eliminates the need for rote memorization, helping students build a strong spatial intelligence that is crucial for higher-level mathematics.</p>
+                <div class="mentor-badges">
+                    <span class="badge">Geometry Expert</span>
+                    <span class="badge">Logic Builder</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="mentor-row">
+            <div class="mentor-content">
+                <span class="subject">Mathematics (Algebra)</span>
+                <h2>Prof. Sana</h2>
+                <p>Prof. Sana is known for her "Step-by-Step" mastery in Algebra. She specializes in breaking down complex equations and variables into simple, solvable patterns.</p>
+                <p>By focusing on the 'Why' behind every formula, she ensures that students develop a high speed and accuracy rate for competitive board challenges.</p>
+                <div class="mentor-badges">
+                    <span class="badge">M.Sc Mathematics</span>
+                    <span class="badge">Speed & Accuracy Coach</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="mentor-row">
+            <div class="mentor-content">
+                <span class="subject">Languages</span>
+                <h2>Prof. Summaiya</h2>
+                <p>Mastering Hindi and Marathi is about more than just grammar; it's about expression. Prof. Somaiya brings deep linguistic expertise to help students master vocabulary and writing skills.</p>
+                <p>She provides students with the tools to write impressive essays and precise answers, ensuring that language subjects become a scoring strength.</p>
+                <div class="mentor-badges">
+                    <span class="badge">Language Expert</span>
+                    <span class="badge">Creative Writing Lead</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="mentor-row">
+            <div class="mentor-content">
+                <span class="subject">Science</span>
+                <h2>Prof. Unusha</h2>
+                <p>Prof. Unusha makes the world of Science tangible. From biological systems to chemical reactions, her teaching revolves around real-world examples and interactive learning.</p>
+                <p>She lays the critical foundation required for students planning to pursue Science in Junior College, focusing on deep conceptual understanding.</p>
+                <div class="mentor-badges">
+                    <span class="badge">Foundation Specialist</span>
+                    <span class="badge">Practical Approach</span>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="homeroom-section">
+        <span class="philosophy-tag">Personalized Mentorship</span>
+        <h2>Homeroom Teachers</h2>
+        <div class="homeroom-grid">
+            <div class="homeroom-card">
+                <div class="h-icon"><i class="fa-solid fa-user-tie"></i></div>
+                <span class="h-tag">Secondary</span>
+                <h3>Prof. Heena Mam</h3>
+                <p class="h-desc">
+Ensuring discipline, structure, and smooth communication, Heena Mam tracks every student's progress with precision and helps align their daily routine with long-term academic goals.
+</p>
+
+            </div>
+
+             <div class="homeroom-card">
+                <div class="h-icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
+                <span class="h-tag">Secondary</span>
+                <h3>Prof. Nagma Mam</h3>
+                <p class="h-desc">
+Known for her warm and approachable nature, Nagma Mam provides consistent emotional support, helping students stay confident, balanced, and focused throughout the academic year.
+</p>
+
+            </div>
+
+            <div class="homeroom-card">
+                <div class="h-icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
+                <span class="h-tag">Primary</span>
+                <h3>Prof. Misbah Mam</h3>
+                <p class="h-desc">Dedicated to the emotional and mental well-being of our students, Misbah Mam provides personalized counseling to help students stay motivated and stress-free.</p>
+            </div>
+
+             <div class="homeroom-card">
+                <div class="h-icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
+                <span class="h-tag">Receptionist</span>
+                <h3>Mrs. Nagma Mam</h3>
+                <p class="h-desc">
+The first smile students and parents see at HS, she ensures smooth coordination, timely communication, and an encouraging environment for everyone walking through our doors.
+</p>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="school-mentors-cta">
+    <h2>Looking for <span>College Mentors?</span></h2>
+    <p>Explore our dedicated and experienced staffs providing quality education</p>
+    <a href="mentors-hsc.html" class="cta-btn">
+        View College Mentors
+        <i class="fa-solid fa-arrow-right"></i>
+    </a>
+</section>
+
+   <div data-include="components/footer.html"></div>
+
+    <!-- JS -->
+     <script src="js/nav.js"></script>
+    <script src="js/include.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success Stories | HS Tutorials</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="global/global.css">
+
+    <style>
+        :root {
+            --bg-dark: #0a0a0b;
+            --glass: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --accent-gold: #d4af37;
+            --text-main: #f1f1f1;
+            --text-dim: #a0a0a0;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: var(--bg-dark); color: var(--text-main); font-family: 'Inter', sans-serif; overflow-x: hidden; }
+
+        /* --- Navigation --- */
+       
+
+        /* --- Hero Section --- */
+        .testi-hero {
+            padding: 180px 10% 60px;
+            text-align: center;
+        }
+        .testi-hero h1 { font-family: 'Poppins', sans-serif; font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 10px; }
+        .testi-hero p { color: var(--accent-gold); letter-spacing: 2px; text-transform: uppercase; font-weight: 600; }
+
+        /* --- Section 1: Automatic Slider --- */
+        .slider-section { padding: 60px 0 100px; background: rgba(255,255,255,0.02); }
+        .swiper { width: 100%; padding: 50px 0; }
+        .swiper-slide {
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            padding: 40px;
+            border-radius: 20px;
+            width: 400px;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .swiper-slide {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.swiper-slide:hover {
+    transform: scale(1.03);
+    box-shadow: 0 20px 40px rgba(212, 175, 55, 0.15);
+}
+
+
+.swiper {
+    width: 100%;
+    overflow: hidden;
+}
+
+.swiper-wrapper {
+    transition-timing-function: linear !important; /* 🔥 smooth continuous */
+}
+
+.swiper-slide {
+    width: 380px; /* slightly smaller */
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+        .quote-icon { color: var(--accent-gold); font-size: 2rem; opacity: 0.5; }
+        .testi-text { font-style: italic; color: var(--text-main); font-size: 1.1rem; }
+        .user-info { display: flex; align-items: center; gap: 15px; margin-top: auto; }
+        .user-info img { width: 50px; height: 50px; border-radius: 50%; object-fit: cover; border: 2px solid var(--accent-gold); }
+        .user-info h4 { font-size: 1rem; margin-bottom: 2px; }
+        .user-info span { font-size: 0.8rem; color: var(--text-dim); }
+
+        /* --- Section 2: Video Testimonials --- */
+        .video-section { padding: 100px 10%; }
+        .section-title { font-family: 'Poppins', sans-serif; font-size: 2.5rem; margin-bottom: 50px; text-align: center; }
+        .section-title span { color: var(--accent-gold); }
+        
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .video-card {
+            background: #000;
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid var(--glass-border);
+            aspect-ratio: 16/9;
+            position: relative;
+        }
+        .video-card iframe { width: 100%; height: 100%; border: none; }
+
+        /* --- Section 3: Image Proof Grid --- */
+        .image-proof-section { padding: 100px 10%; background: #050505; }
+        .image-gallery {
+            column-count: 3;
+            column-gap: 20px;
+        }
+        .image-gallery img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            filter: grayscale(30%);
+            transition: 0.4s;
+            border: 1px solid var(--glass-border);
+        }
+        .image-gallery img:hover { filter: grayscale(0%); transform: scale(1.02); border-color: var(--accent-gold); }
+
+        /* --- Footer --- */
+        footer { padding: 60px 10%; text-align: center; border-top: 1px solid var(--glass-border); color: var(--text-dim); }
+
+        @media (max-width: 768px) {
+            .image-gallery { column-count: 1; }
+            .nav-links { display: none; }
+        }
+        .swiper-nav {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.swiper-button-prev-custom,
+.swiper-button-next-custom {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.swiper-button-prev-custom i,
+.swiper-button-next-custom i {
+    color: var(--accent-gold);
+    font-size: 1.2rem;
+}
+
+.swiper-button-prev-custom:hover,
+.swiper-button-next-custom:hover {
+    background: rgba(212, 175, 55, 0.15);
+    transform: scale(1.08);
+}
+
+.vertical-reels {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+.reel-card {
+  position: relative;
+  width: 100%;
+  max-width: 260px;
+  aspect-ratio: 9 / 16; /* 🔥 Instagram native */
+  border-radius: 18px;
+  overflow: hidden;
+  background: #000;
+  border: 1px solid var(--glass-border);
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+
+.reel-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.85);
+  transition: 0.4s ease;
+}
+
+/* Play overlay */
+.reel-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10,10,11,0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.4s ease;
+}
+
+.reel-overlay i {
+  font-size: 3rem;
+  color: var(--accent-gold);
+  background: rgba(0,0,0,0.45);
+  padding: 20px;
+  border-radius: 50%;
+  border: 1px solid var(--accent-gold);
+}
+
+/* Hover effect */
+.reel-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+.reel-card:hover img {
+  transform: scale(1.06);
+  filter: brightness(1);
+}
+
+.reel-card:hover .reel-overlay {
+  background: rgba(10,10,11,0.15);
+}
+
+   /* --- Footer (Consistent) --- */
+        footer {
+            background: #050505; padding: 80px 10% 30px;
+            border-top: 1px solid var(--glass-border); color: var(--text-main);
+        }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 4rem; margin-bottom: 60px; }
+        .footer-heading { font-family: 'Poppins', sans-serif; color: var(--accent-gold); margin-bottom: 25px; text-transform: uppercase; letter-spacing: 2px; }
+        .footer-links { list-style: none; }
+        .footer-links a { text-decoration: none; color: var(--text-dim); transition: 0.3s; font-size: 0.9rem; }
+        .footer-links a:hover { color: var(--accent-gold); padding-left: 5px; }
+
+        @media (max-width: 968px) {
+            .manifesto { grid-template-columns: 1fr; gap: 40px; }
+            .wide { grid-column: span 1; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+
+    </style>
+</head>
+<body data-page="testimonials">
+
+    <div data-include="components/nav.html"></div>
+
+   
+
+    <header class="testi-hero">
+        <p>Real Stories. Real Results.</p>
+        <h1>Voices of Excellence</h1>
+    </header>
+
+    <section class="slider-section">
+       <div class="swiper mySwiper">
+  <div class="swiper-wrapper">
+
+    <div class="swiper-slide">
+      <i class="fa-solid fa-quote-left quote-icon"></i>
+      <p class="testi-text">
+        "HS Tutorials completely changed my approach towards studies. The discipline, clarity,
+        and constant motivation from the teachers helped me perform far beyond my expectations."
+      </p>
+      <div class="user-info">
+        <div>
+          <h4></h4>
+          <span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="swiper-slide">
+      <i class="fa-solid fa-quote-left quote-icon"></i>
+      <p class="testi-text">
+        "The teachers here genuinely care about every student. The learning environment is focused,
+        positive, and motivating, which made it easier to stay consistent throughout the year."
+      </p>
+      <div class="user-info">
+        <div>
+          <h4></h4>
+          <span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="swiper-slide">
+      <i class="fa-solid fa-quote-left quote-icon"></i>
+      <p class="testi-text">
+        "HS Tutorials helped me build strong fundamentals and confidence. Regular guidance,
+        doubt-solving sessions, and discipline played a huge role in my academic growth."
+      </p>
+      <div class="user-info">
+        <div>
+          <h4></h4>
+          <span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="swiper-slide">
+      <i class="fa-solid fa-quote-left quote-icon"></i>
+      <p class="testi-text">
+        "It’s not just about marks here. HS Tutorials focuses on discipline, mindset,
+        and consistency, which helped me improve both academically and personally."
+      </p>
+      <div class="user-info">
+        <div>
+          <h4></h4>
+          <span></span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+               <div class="swiper-nav">
+    <div class="swiper-button-prev-custom">
+        <i class="fa-solid fa-chevron-left"></i>
+    </div>
+    <div class="swiper-button-next-custom">
+        <i class="fa-solid fa-chevron-right"></i>
+    </div>
+</div>
+
+        </div>
+    </section>
+
+ <section class="video-section">
+  <h2 class="section-title">Video <span>Interviews</span></h2>
+
+  <div class="video-grid vertical-reels">
+
+    <!-- REEL 1 -->
+    <a href="https://www.instagram.com/reel/Cs8RoAxIPA7/"
+       target="_blank"
+       class="reel-card">
+
+       <img src="img/rslt/reel3.jpeg" alt="Student Interview">
+
+
+      <div class="reel-overlay">
+        <i class="fa-solid fa-play"></i>
+      </div>
+    </a>
+
+    <!-- REEL 2 -->
+    <a href="https://www.instagram.com/reel/Cs3D4rgIeGe/"
+       target="_blank"
+       class="reel-card">
+
+      <img src="img/rslt/reel2.jpeg" alt="Student Interview">
+
+      <div class="reel-overlay">
+        <i class="fa-solid fa-play"></i>
+      </div>
+    </a>
+
+    <!-- REEL 3 -->
+    <a href="https://www.instagram.com/reel/CstHqujgYpp/"
+       target="_blank"
+       class="reel-card">
+
+       <img src="img/rslt/reel1.jpeg" alt="Student Interview">
+
+      <div class="reel-overlay">
+        <i class="fa-solid fa-play"></i>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+
+    <section class="image-proof-section">
+        <h2 class="section-title">Result <span>Highlights</span></h2>
+        <div class="image-gallery">
+            <img src="img/rslt/r1.jpeg" alt="Result 1">
+            <img src="img/rslt/r2.jpeg" alt="Result 2">
+            <img src="img/rslt/r3.jpeg" alt="Result 3">
+            <img src="img/rslt/r4.jpeg" alt="Result 4">
+            <img src="img/rslt/r5.jpeg" alt="Result 5">
+        </div>
+    </section>
+
+   <div data-include="components/footer.html"></div>
+
+    <!-- JS -->
+     <script src="js/nav.js"></script>
+    <script src="js/include.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+const swiper = new Swiper(".mySwiper", {
+    //slidesPerView: "auto",
+    spaceBetween: 40,
+    loop: true,
+    speed: 800, // Snappier transition when using buttons
+    grabCursor: true,
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next-custom",
+        prevEl: ".swiper-button-prev-custom",
+    },
+    breakpoints: {
+        320: { slidesPerView: 1, spaceBetween: 20 },
+        768: { slidesPerView: "auto", spaceBetween: 40 }
+    }
+});
+</script>
+
+
+
+</body>
+</html>

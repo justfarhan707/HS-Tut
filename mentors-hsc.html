@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Mentors | HS Tutorials</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Poppins:wght@600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="global/global.css">
+
+    <style>
+        :root {
+            --bg-dark: #0a0a0b;
+            --glass: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --accent-gold: #d4af37;
+            --accent-glow: rgba(212, 175, 55, 0.3);
+            --text-main: #f1f1f1;
+            --text-dim: #a0a0a0;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: var(--bg-dark); color: var(--text-main); font-family: 'Inter', sans-serif; line-height: 1.6; overflow-x: hidden; }
+
+        /* --- Navigation --- */
+    
+
+        /* --- Mentors Hero --- */
+        .mentors-hero {
+            padding: 180px 10% 80px;
+            text-align: center;
+            background: radial-gradient(circle at top, rgba(212, 175, 55, 0.05) 0%, transparent 70%);
+        }
+        .philosophy-tag {
+            color: var(--accent-gold);
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 15px;
+        }
+        .mentors-hero h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            line-height: 1.1;
+            margin-bottom: 25px;
+            background: linear-gradient(to bottom, #fff 50%, #888);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        }
+
+        /* --- Industry Standard Section --- */
+        .industry-section {
+            padding: 60px 10%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 100px;
+            align-items: center;
+        }
+        .industry-text h2 { font-family: 'Poppins', sans-serif; font-size: 2.5rem; margin-bottom: 20px; }
+        .industry-text p { color: var(--text-dim); font-size: 1.1rem; margin-bottom: 20px; }
+        
+        .stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .stat-box {
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+        }
+        .stat-box h3 { color: var(--accent-gold); font-size: 2rem; margin-bottom: 5px; }
+
+       /* --- Z-Layout Mentor Styles --- */
+.faculty-section { padding: 80px 10%; }
+
+.mentor-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    margin-bottom: 120px;
+}
+
+/* Flips the row (Text right, Boxes left) */
+.mentor-row:nth-child(even) { direction: rtl; }
+.mentor-row:nth-child(even) .mentor-text { direction: ltr; text-align: left; }
+.mentor-row:nth-child(even) .info-visual-grid { direction: ltr; }
+
+.mentor-text h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+.mentor-text p { color: var(--text-dim); font-size: 1.1rem; line-height: 1.8; }
+
+/* The Box Grid on the Right/Left */
+.info-visual-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 150px 120px;
+    gap: 20px;
+}
+
+.info-box {
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 0.4s;
+}
+
+.info-box:hover {
+    border-color: var(--accent-gold);
+    background: rgba(212, 175, 55, 0.05);
+}
+
+.info-box span {
+    color: var(--accent-gold);
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.info-box h4 { font-size: 1.4rem; color: #fff; }
+
+/* The Long Degree Box */
+.degree-box {
+    grid-column: span 2; /* Spans across both columns */
+    border-left: 4px solid var(--accent-gold);
+}
+
+@media (max-width: 968px) {
+    .mentor-row, .mentor-row:nth-child(even) { grid-template-columns: 1fr; direction: ltr; gap: 40px; }
+}
+
+        /* --- Visiting Faculty Section (Untouched as requested) --- */
+        .visiting-section {
+            padding: 100px 10%;
+            background: linear-gradient(to bottom, transparent, rgba(212, 175, 55, 0.03));
+            text-align: center;
+        }
+        .visiting-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 50px;
+        }
+        .visiting-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--glass-border);
+            padding: 50px 40px;
+            border-radius: 25px;
+            transition: 0.3s;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .visiting-card:hover {
+            border-color: var(--accent-gold);
+            background: rgba(212, 175, 55, 0.05);
+            transform: translateY(-5px);
+        }
+        .v-icon {
+            width: 60px; height: 60px;
+            background: var(--glass);
+            border-radius: 50%;
+            display: grid; place-items: center;
+            margin-bottom: 20px;
+            color: var(--accent-gold);
+            font-size: 1.5rem;
+            border: 1px solid var(--glass-border);
+        }
+        .visiting-card h3 { font-family: 'Poppins', sans-serif; font-size: 1.8rem; margin-bottom: 10px; }
+        .v-tag {
+            color: var(--accent-gold);
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+        .v-desc { color: var(--text-dim); font-size: 1rem; line-height: 1.6; max-width: 400px; }
+
+        /* --- Faculty Section Header --- */
+.section-intro {
+    text-align: center;
+    padding: 60px 10% 40px;
+    position: relative;
+}
+
+.section-intro h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    background: linear-gradient(to right, #fff, var(--accent-gold), #fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+}
+
+.section-intro .divider {
+    width: 100px;
+    height: 4px;
+    background: var(--accent-gold);
+    margin: 20px auto;
+    border-radius: 2px;
+    box-shadow: 0 0 15px var(--accent-glow);
+}
+
+        /* --- Footer --- */
+        footer {
+            background: #050505; padding: 80px 10% 30px;
+            border-top: 1px solid var(--glass-border);
+        }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 4rem; }
+        .footer-heading { font-family: 'Poppins', sans-serif; color: var(--accent-gold); margin-bottom: 25px; text-transform: uppercase; letter-spacing: 2px; }
+        .footer-links { list-style: none; }
+        .footer-links li { margin-bottom: 12px; }
+        .footer-links a { text-decoration: none; color: var(--text-dim); transition: 0.3s; }
+        .footer-links a:hover { color: var(--accent-gold); }
+
+        /* --- Responsive --- */
+        @media (max-width: 968px) {
+            .industry-section { grid-template-columns: 1fr; gap: 50px; }
+            .visiting-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        /* --- School Mentors CTA --- */
+.school-mentors-cta {
+    padding: 120px 10%;
+    text-align: center;
+    background: radial-gradient(circle at center, rgba(212, 175, 55, 0.08), transparent 70%);
+    border-top: 1px solid var(--glass-border);
+}
+
+.school-mentors-cta h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 15px;
+}
+
+.school-mentors-cta h2 span {
+    color: var(--accent-gold);
+}
+
+.school-mentors-cta p {
+    color: var(--text-dim);
+    max-width: 600px;
+    margin: 0 auto 40px;
+    font-size: 1.1rem;
+}
+
+.cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 38px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #000;
+    background: var(--accent-gold);
+    border-radius: 50px;
+    transition: 0.35s ease;
+    box-shadow: 0 0 30px var(--accent-glow);
+}
+
+.cta-btn i {
+    transition: transform 0.3s ease;
+}
+
+.cta-btn:hover {
+    background: #fff;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 40px rgba(212, 175, 55, 0.4);
+}
+
+.cta-btn:hover i {
+    transform: translateX(6px);
+}
+
+    </style>
+</head>
+<body data-page="mentors">
+    
+    <div data-include="components/nav.html"></div>
+
+    <header class="mentors-hero">
+        <span class="philosophy-tag">Architects of Excellence</span>
+        <h1>The Masters Behind <br>Your Success.</h1>
+        <p style="color: var(--text-dim); max-width: 700px; margin: 0 auto; font-size: 1.2rem;">We scout industry veterans who have spent decades decoding the HSC boards and competitive exams.</p>
+    </header>
+
+    <section class="industry-section">
+        <div class="industry-text">
+            <h2>The HS Faculty <br><span style="color: var(--accent-gold);">Gold Standard.</span></h2>
+            <p>At HS Tutorials, we understand that for HSC students, every mark is a gateway to their dream career. That's why our faculty consists only of <strong>Top 1% Industry Experts</strong>.</p>
+            <p>Our mentors are former board paper examiners and specialists who know exactly where students lose marks.</p>
+        </div>
+        <div class="stat-grid">
+            <div class="stat-box"><h3>15+</h3><p style="color: var(--text-dim);">Avg. Years Exp</p></div>
+            <div class="stat-box"><h3>10k+</h3><p style="color: var(--text-dim);">Success Stories</p></div>
+            <div class="stat-box"><h3>1:1</h3><p style="color: var(--text-dim);">Mentorship</p></div>
+            <div class="stat-box"><h3>24/7</h3><p style="color: var(--text-dim);">Doubt Support</p></div>
+        </div>
+    </section>
+
+    
+    
+    <div class="section-intro">
+        <span class="philosophy-tag">The Core Team</span>
+        <h2>Meet the Faculties of HSC</h2>
+        <div class="divider"></div>
+        <p style="color: var(--text-dim);">Guided by masters, driven by excellence.</p>
+    </div>
+    
+    <section class="faculty-section">
+    <div class="mentor-row">
+        <div class="mentor-text">
+            <span class="philosophy-tag" style="text-align: left;">Senior Consultant</span>
+            <h2>Engr. Akhtar</h2>
+            <p>Bringing an engineering perspective to the classroom, Engineer Akhtar bridges the gap between theoretical concepts and practical application. With over two decades of experience, he simplifies complex problem-solving for competitive aspirants.</p>
+        </div>
+        <div class="info-visual-grid">
+            <div class="info-box">
+                <span>Experience</span>
+                <h4>25+ Years</h4>
+            </div>
+            <div class="info-box">
+                <span>Specialty</span>
+                <h4>Maths & Physics</h4>
+            </div>
+            <div class="info-box degree-box">
+                <span>Academic Credentials</span>
+                <h4>B.E. Electrical Engineering</h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="mentor-row">
+        <div class="mentor-text">
+            <span class="philosophy-tag" style="text-align: left;">Physics Expert</span>
+            <h2>Prof. Samar</h2>
+            <p>A specialist in advanced Physics, Prof. Samar is known for her structured teaching methodology. She focuses on conceptual clarity, helping students navigate the toughest chapters of the HSC syllabus with ease and confidence.</p>
+        </div>
+        <div class="info-visual-grid">
+            <div class="info-box">
+                <span>Experience</span>
+                <h4>10+ Years</h4>
+            </div>
+            <div class="info-box">
+                <span>Specialty</span>
+                <h4>Physics</h4>
+            </div>
+            <div class="info-box degree-box">
+                <span>Academic Credentials</span>
+                <h4>M.Sc. Physics</h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="mentor-row">
+        <div class="mentor-text">
+            <span class="philosophy-tag" style="text-align: left;">Modern Pedagogy</span>
+            <h2>Prof. Salman</h2>
+            <p>Currently pursuing a PhD, Prof. Salman brings the latest academic research into his teaching. His high-energy sessions and innovative shortcuts make him a favorite among students aiming for top scores in entrance exams.</p>
+        </div>
+        <div class="info-visual-grid">
+            <div class="info-box">
+                <span>Experience</span>
+                <h4>5+ Years</h4>
+            </div>
+            <div class="info-box">
+                <span>Specialty</span>
+                <h4>Physics</h4>
+            </div>
+            <div class="info-box degree-box">
+                <span>Academic Credentials</span>
+                <h4>Ph.D. Scholar (Physics)</h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="mentor-row">
+        <div class="mentor-text">
+            <span class="philosophy-tag" style="text-align: left;">Medical Sciences</span>
+            <h2>Dr. Rizwan</h2>
+            <p>As a medical professional, Dr. Rizwan provides students with an unparalleled depth of knowledge in Biology. His "Doctor's Insight" approach helps NEET aspirants understand anatomy and physiology with professional precision.</p>
+        </div>
+        <div class="info-visual-grid">
+            <div class="info-box">
+                <span>Experience</span>
+                <h4>5+ Years</h4>
+            </div>
+            <div class="info-box">
+                <span>Specialty</span>
+                <h4>Biology</h4>
+            </div>
+            <div class="info-box degree-box">
+                <span>Academic Credentials</span>
+                <h4>BHMS (Doctor of Medicine)</h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="mentor-row">
+        <div class="mentor-text">
+            <span class="philosophy-tag" style="text-align: left;">Mathematics Head</span>
+            <h2>Dr. Jawed</h2>
+            <p>A doctorate holder in Mathematics, Dr. Jawed is a master of numbers. He specializes in breaking down high-level Calculus and Algebra into simple, logical steps, making Math accessible to every student.</p>
+        </div>
+        <div class="info-visual-grid">
+            <div class="info-box">
+                <span>Experience</span>
+                <h4>15+ Years</h4>
+            </div>
+            <div class="info-box">
+                <span>Specialty</span>
+                <h4>Mathematics</h4>
+            </div>
+            <div class="info-box degree-box">
+                <span>Academic Credentials</span>
+                <h4>Ph.D. in Mathematics</h4>
+            </div>
+        </div>
+    </div>
+
+   <div class="mentor-row">
+        <div class="mentor-text">
+            <span class="philosophy-tag" style="text-align: left;">Chemistry Department</span>
+            <h2>Dr. Anita</h2>
+            <p>With a Doctorate in Chemistry and nearly two decades of academic leadership, Dr. Anita is a master of Inorganic and Physical Chemistry. She is renowned for her ability to simplify the periodic table and chemical bonding, making even the most abstract concepts tangible for her students.</p>
+        </div>
+        <div class="info-visual-grid">
+            <div class="info-box">
+                <span>Experience</span>
+                <h4>18+ Years</h4>
+            </div>
+            <div class="info-box">
+                <span>Specialty</span>
+                <h4>Physical Chem</h4>
+            </div>
+            <div class="info-box degree-box">
+                <span>Academic Credentials</span>
+                <h4>Ph.D. in Chemistry</h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="mentor-row">
+        <div class="mentor-text">
+            <span class="philosophy-tag" style="text-align: left;">Organic Specialist</span>
+            <h2>Prof. Amina</h2>
+            <p>Prof. Amina brings a fresh and energetic approach to Organic Chemistry. Specializing in reaction mechanisms and molecular structures, her teaching style focuses on logical deduction rather than rote memorization, helping students excel in both Boards and entrance exams.</p>
+        </div>
+        <div class="info-visual-grid">
+            <div class="info-box">
+                <span>Experience</span>
+                <h4>8+ Years</h4>
+            </div>
+            <div class="info-box">
+                <span>Specialty</span>
+                <h4>Organic Chemistry</h4>
+            </div>
+            <div class="info-box degree-box">
+                <span>Academic Credentials</span>
+                <h4>M.Sc. in Chemistry</h4>
+            </div>
+        </div>
+    </div>
+
+
+</section>
+
+
+   <section class="visiting-section">
+    <span class="philosophy-tag">Guest Experts</span>
+    <h2 style="font-family: 'Poppins'; font-size: 2.5rem;">Visiting Faculty</h2>
+    <p style="color: var(--text-dim); margin-top: 10px;">Enthusiastic specialists bringing deep core expertise to every session.</p>
+
+    <div class="visiting-grid">
+        <div class="visiting-card">
+            <div class="v-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <span class="v-tag">Biology Mastermind</span>
+            <h3>Prof. Humaira</h3>
+            <p class="v-desc">A veteran educator with over 25 years of experience. She specializes in "Exam-Winning Presentations," training students to draft perfect diagrams and precise answers that secure a 100/100 score in Biology boards.</p>
+        </div>
+
+        <div class="visiting-card">
+            <div class="v-icon"><i class="fa-solid fa-stethoscope"></i></div> <span class="v-tag">Medical Entrance Expert</span>
+            <h3>Prof. Bushra</h3>
+            <p class="v-desc">An aspiring medical professional who brings current clinical insights to the classroom. She excels in breaking down complex physiology and anatomy, providing NEET aspirants with the competitive edge needed for top-tier medical colleges.</p>
+        </div>
+    </div>
+</section>
+
+
+<section class="school-mentors-cta">
+    <h2>Looking for <span>School Mentors?</span></h2>
+    <p>Explore our dedicated SSC & foundation-level faculty shaping young achievers.</p>
+    <a href="schl_clg.html" class="cta-btn">
+        View School Mentors
+        <i class="fa-solid fa-arrow-right"></i>
+    </a>
+</section>
+
+   <div data-include="components/footer.html"></div>
+
+    <!-- JS -->
+     <script src="js/nav.js"></script>
+    <script src="js/include.js"></script>
+
+</body>
+</html>

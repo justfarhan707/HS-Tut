@@ -1,0 +1,2049 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <!-- BASIC META -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0a0a0b">
+
+
+  <!-- TITLE (MOST IMPORTANT SEO SIGNAL) -->
+  <title>HS Tutorials | SSC, HSC & College Coaching in Mumbai</title>
+
+  <!-- META DESCRIPTION -->
+  <meta name="description" content="HS Tutorials is a premium coaching institute in Mumbai offering SSC, HSC, and College-level education. Trusted since 2016 with 90%+ success rate, expert mentors, and result-driven teaching.">
+
+  <!-- KEYWORDS (LOW PRIORITY BUT STILL OK) -->
+  <meta name="keywords" content="HS Tutorials, SSC coaching Mumbai, HSC classes Mumbai, college coaching, tuition classes Kurla, best coaching institute Mumbai">
+
+  <!-- AUTHOR -->
+  <meta name="author" content="HS Tutorials">
+
+  <!-- CANONICAL (VERY IMPORTANT FOR SEO) -->
+  <link rel="canonical" href="https://hstutorials.in/">
+
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+
+  <!-- OPEN GRAPH (FOR WHATSAPP / FACEBOOK / LINK PREVIEWS) -->
+  <meta property="og:title" content="HS Tutorials | SSC, HSC & College Coaching">
+  <meta property="og:description" content="Premium education with discipline, mentorship, and results. SSC, HSC & College coaching in Mumbai.">
+  <meta property="og:image" content="https://hstutorials.in/img/og-cover.jpg">
+  <meta property="og:url" content="https://hstutorials.in/">
+  <meta property="og:type" content="website">
+
+  <!-- TWITTER CARD -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="HS Tutorials | Master Your Future">
+  <meta name="twitter:description" content="Trusted coaching institute in Mumbai for SSC, HSC & College students.">
+  <meta name="twitter:image" content="https://hstutorials.in/img/og-cover.jpg">
+
+  <!-- FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Poppins:wght@600;800&display=swap" rel="stylesheet">
+
+  <!-- ICONS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- GLOBAL CSS -->
+  <link rel="stylesheet" href="global/global.css">
+
+    <style>
+        :root {
+            --bg-dark: #0a0a0b;
+            --glass: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --accent-gold: #d4af37;
+            --accent-glow: rgba(212, 175, 55, 0.3);
+            --text-main: #f1f1f1;
+            --text-dim: #a0a0a0;
+        }
+
+        * {
+            margin: 0;  
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;   
+        }
+
+        /* --- Premium Navigation --- */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 10%;
+            background: rgba(10, 10, 11, 0.8);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .logo {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            color: var(--text-main);
+        }
+
+        .logo span {
+            color: var(--accent-gold);
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 2.5rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dim);
+            font-weight: 400;
+            font-size: 0.9rem;
+            transition: 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-gold);
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 10%;
+            background: radial-gradient(circle at top right, #1a1a1c, #0a0a0b);
+        }
+
+        .hero h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(3rem, 8vw, 5rem);
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(to bottom, #fff 40%, #777);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            color: var(--text-dim);
+            max-width: 600px;
+            font-size: 1.1rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .cta-btn {
+            background: var(--accent-gold);
+            color: #000;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            transition: 0.4s;
+            box-shadow: 0 10px 30px var(--accent-glow);
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px var(--accent-glow);
+        }
+
+        /* --- Features/Courses Section --- */
+        .section {
+            padding: 100px 10%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            padding: 40px;
+            border-radius: 20px;
+            transition: 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: var(--accent-gold);
+            transform: translateY(-10px);
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+            color: var(--accent-gold);
+        }
+
+        .card p {
+            color: var(--text-dim);
+            font-size: 0.95rem;
+        }
+
+        /* --- Courses Section --- */
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+            margin-top: 40px;
+        }
+
+        .course-card {
+            background: linear-gradient(145deg, #121214, #0a0a0b);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 20px;
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .course-image {
+            width: 100%;
+            height: 200px;
+            background: #1a1a1c; /* Placeholder for actual images */
+            border-radius: 16px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Mock image styling */
+        .course-image::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(10,10,11,0.8), transparent);
+        }
+
+        .course-content {
+            padding: 10px;
+        }
+
+        .course-tag {
+            font-size: 0.7rem;
+            color: var(--accent-gold);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .course-content h4 {
+            font-size: 1.5rem;
+            font-family: 'Poppins', sans-serif;
+            margin-bottom: 12px;
+        }
+
+        .know-more-btn {
+            margin-top: auto;
+            display: inline-block;
+            text-align: center;
+            padding: 12px;
+            border: 1px solid var(--accent-gold);
+            color: var(--accent-gold);
+            text-decoration: none;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .know-more-btn:hover {
+            background: var(--accent-gold);
+            color: #000;
+            box-shadow: 0 0 20px var(--accent-glow);
+        }
+
+        .course-card:hover {
+            border-color: rgba(212, 175, 55, 0.5);
+            transform: scale(1.02);
+        }
+
+        /* --- Testimonials Section --- */
+        .testimonials-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 50px;
+        }
+
+        .testimonial-card {
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            padding: 30px;
+            border-radius: 24px;
+            position: relative;
+            transition: 0.3s;
+        }
+
+        .testimonial-card:hover {
+            background: rgba(255, 255, 255, 0.05);
+            transform: translateY(-5px);
+            border-color: var(--accent-gold);
+        }
+
+        .quote-icon {
+            font-size: 3rem;
+            color: var(--accent-gold);
+            opacity: 0.2;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-family: 'serif';
+        }
+
+        .student-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .student-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--accent-gold); /* Placeholder */
+            border: 2px solid var(--glass-border);
+        }
+
+        .student-name h5 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            margin-bottom: 2px;
+        }
+
+        .student-name span {
+            font-size: 0.75rem;
+            color: var(--accent-gold);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            color: var(--text-dim);
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+
+        .stars {
+            color: var(--accent-gold);
+            font-size: 0.8rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        /* --- Extra Curricular Section --- */
+        .extra-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 3rem;
+            margin-top: 50px;
+        }
+
+        .video-card {
+            position: relative;
+            border-radius: 30px;
+            overflow: hidden;
+            background: #000;
+            border: 1px solid var(--glass-border);
+            transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+        }
+
+        /* Video Placeholder / Container */
+        .video-wrapper {
+            aspect-ratio: 16 / 9;
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            filter: grayscale(40%);
+            transition: 0.5s;
+        }
+
+        /* Play Button Overlay */
+        .play-trigger {
+            width: 80px;
+            height: 80px;
+            background: rgba(212, 175, 55, 0.2);
+            border: 1px solid var(--accent-gold);
+            backdrop-filter: blur(5px);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.4s;
+            opacity: 0.8;
+        }
+
+        .play-trigger::after {
+            content: '';
+            width: 0; 
+            height: 0; 
+            border-top: 12px solid transparent;
+            border-bottom: 12px solid transparent;
+            border-left: 20px solid var(--accent-gold);
+            margin-left: 5px;
+        }
+
+        .video-card-content {
+            padding: 30px;
+            background: linear-gradient(to top, #0a0a0b, transparent);
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .video-card-content h4 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.8rem;
+            color: #fff;
+            margin-bottom: 5px;
+        }
+
+        .video-card-content p {
+            color: var(--accent-gold);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 700;
+        }
+
+        /* --- Mentors Section --- */
+        .mentors-container {
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+            flex-wrap: wrap;
+            margin-top: 50px;
+        }
+
+        .mentor-card {
+            width: 350px;
+            text-align: center;
+            position: relative;
+        }
+
+        .mentor-image-container {
+            width: 100%;
+            height: 450px;
+            border-radius: 30px;
+            overflow: hidden;
+            margin-bottom: 25px;
+            border: 1px solid var(--glass-border);
+            position: relative;
+            transition: 0.5s ease;
+        }
+
+        .mentor-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: saturate(0.8) contrast(1.1);
+            transition: 0.5s ease;
+        }
+
+        .mentor-card:hover .mentor-image-container {
+            border-color: var(--accent-gold);
+            box-shadow: 0 0 30px var(--accent-glow);
+        }
+
+        .mentor-card:hover img {
+            transform: scale(1.05);
+            filter: saturate(1);
+        }
+
+        .mentor-info {
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            padding: 25px;
+            border-radius: 20px;
+            margin-top: -60px;
+            position: relative;
+            z-index: 10;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .mentor-info h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+
+        .mentor-info span {
+            color: var(--accent-gold);
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            font-weight: 700;
+        }
+
+        .mentor-bio {
+            font-size: 0.9rem;
+            color: var(--text-dim);
+            margin-top: 15px;
+        }
+
+        .social-links {
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .social-links a {
+            color: var(--text-main);
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--accent-gold);
+        }
+
+        /* Hover Effects */
+        .video-card:hover {
+            transform: scale(1.03);
+            border-color: var(--accent-gold);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+        }
+
+        .video-card:hover .video-wrapper {
+            filter: grayscale(0%);
+            transform: scale(1.1);
+        }
+
+        .video-card:hover .play-trigger {
+            background: var(--accent-gold);
+        }
+
+        /* --- Footer --- */
+
+        /* --- Enhanced Premium Footer --- */
+        /* ===============================
+   GLOBAL FOOTER
+   =============================== */
+
+.site-footer {
+  background: #050505;
+  padding: 80px 10% 30px;
+  border-top: 1px solid var(--glass-border);
+  color: var(--text-main);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.2fr;
+  gap: 4rem;
+  margin-bottom: 60px;
+}
+
+.footer-brand p {
+  color: var(--text-dim);
+  font-size: 0.9rem;
+  max-width: 320px;
+}
+
+.footer-heading {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  margin-bottom: 22px;
+  color: var(--accent-gold);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  color: var(--text-dim);
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  color: var(--accent-gold);
+  padding-left: 6px;
+}
+
+/* QR BOX */
+.footer-qr {
+  text-align: center;
+}
+
+.qr-box {
+  width: 160px;
+  height: 160px;
+  margin: 0 auto 10px;
+  padding: 12px;
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.4s;
+}
+
+.qr-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.qr-box:hover {
+  border-color: var(--accent-gold);
+  box-shadow: 0 0 30px var(--accent-glow);
+  transform: scale(1.05);
+}
+
+.qr-caption {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* FOOTER BOTTOM */
+.footer-bottom {
+  padding-top: 30px;
+  border-top: 1px solid var(--glass-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  color: var(--text-dim);
+}
+
+.footer-socials {
+  display: flex;
+  gap: 18px;
+}
+
+.footer-socials a {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--glass-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-dim);
+  transition: 0.3s;
+}
+
+.footer-socials a:hover {
+  background: var(--accent-gold);
+  color: #000;
+  box-shadow: 0 0 20px var(--accent-glow);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .site-footer {
+    padding: 60px 6% 30px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+}
+
+        /* Fixed the hover CSS from previous snippet */
+        .video-card:hover .play-trigger {
+            background: var(--accent-gold);
+        }
+
+        /* --- Slider Layout --- */
+        .courses-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .courses-grid {
+            display: flex; /* Changed from grid to flex for sliding */
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            gap: 2rem;
+            padding: 20px 5px;
+            scrollbar-width: none; /* Hide scrollbar Firefox */
+        }
+
+        .courses-grid::-webkit-scrollbar {
+            display: none; /* Hide scrollbar Chrome/Safari */
+        }
+
+        .course-card {
+            min-width: 350px; /* Fixed width for slider cards */
+            background: linear-gradient(145deg, #121214, #0a0a0b);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 20px;
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* Slider Nav Buttons */
+        .slider-btn {
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            color: var(--accent-gold);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(10px);
+            transition: 0.3s;
+            z-index: 10;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .slider-btn:hover {
+            background: var(--accent-gold);
+            color: #000;
+            box-shadow: 0 0 20px var(--accent-glow);
+        }
+
+        /* --- Hamburger Menu --- */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.hamburger span {
+  width: 28px;
+  height: 2px;
+  background: var(--text-main);
+  transition: 0.4s;
+}
+
+/* Mobile Menu Panel */
+.mobile-menu {
+  position: fixed;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-20px);
+  width: 90%;
+  background: rgba(10, 10, 11, 0.95);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.4s ease;
+  z-index: 1000;
+}
+
+.mobile-menu a {
+  color: var(--text-main);
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.mobile-menu a:hover {
+  color: var(--accent-gold);
+}
+
+.mobile-cta {
+  margin-top: 10px;
+  background: var(--accent-gold);
+  color: #000 !important;
+  padding: 14px;
+  border-radius: 50px;
+  font-weight: 700;
+}
+
+/* Active State */
+.mobile-menu.active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Hamburger animation */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+/* Results Section */
+.results-container {
+  margin-top: 50px;
+}
+
+.results-subheading {
+  font-family: 'Poppins', sans-serif;
+  color: var(--accent-gold);
+  font-size: 1.8rem;
+  margin: 40px 0 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.results-subheading::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--glass-border);
+}
+
+/* Slider Wrapper */
+.result-slider-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Slider Grid */
+.result-grid {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 10px 5px;
+  scrollbar-width: none;
+}
+
+.result-grid::-webkit-scrollbar {
+  display: none;
+}
+
+/* Result Card */
+.result-card {
+  min-width: 280px;
+  aspect-ratio: 4 / 5;
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  position: relative;
+}
+
+.result-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.4s ease;
+}
+
+/* Hover Effects */
+.result-card:hover {
+  transform: scale(1.04);
+  border-color: var(--accent-gold);
+  box-shadow: 0 15px 40px var(--accent-glow);
+}
+
+.result-card:hover img {
+  transform: scale(1.08);
+}
+
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 10, 11, 0.95);
+  backdrop-filter: blur(20px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.4s ease;
+  z-index: 9999;
+}
+
+.lightbox.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 20px;
+  box-shadow: 0 0 60px rgba(212,175,55,0.35);
+  animation: zoomIn 0.4s ease;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 3rem;
+  color: var(--accent-gold);
+  cursor: pointer;
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.85); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+
+
+/* Overlay for play button */
+.video-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+/* Clickable link layer */
+.video-link {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+}
+
+/* Keep your existing play-trigger */
+
+/* --- Glimpse of HS --- */
+
+.glimpse-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  gap: 3rem;
+  margin-top: 50px;
+}
+
+.glimpse-card {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: 28px;
+  overflow: hidden;
+  transition: 0.4s ease;
+}
+
+.glimpse-card:hover {
+  border-color: var(--accent-gold);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+  transform: translateY(-6px);
+}
+
+/* Video Container */
+.glimpse-video {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.glimpse-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.9) saturate(0.9);
+  transition: 0.6s ease;
+}
+
+.glimpse-card:hover video {
+  transform: scale(1.05);
+  filter: brightness(1) saturate(1);
+}
+
+/* Text Content */
+.glimpse-content {
+  padding: 25px;
+  text-align: center;
+}
+
+.glimpse-content h4 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+.glimpse-content p {
+  font-size: 0.95rem;
+  color: var(--text-dim);
+  line-height: 1.7;
+}
+
+/* Mobile Fix */
+@media (max-width: 500px) {
+  .glimpse-content {
+    padding: 20px;
+  }
+}
+
+/* ===============================
+   MOBILE RESPONSIVE FIXES
+   =============================== */
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Reduce section padding */
+@media (max-width: 600px) {
+  .section {
+    padding: 80px 6%;
+  }
+
+  .section-title h2 {
+    font-size: 2rem;
+  }
+
+  .section-title p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Fix Glimpse videos overflow */
+@media (max-width: 768px) {
+  .glimpse-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .glimpse-video {
+    aspect-ratio: 16 / 9;
+  }
+}
+
+/* Fix Programs slider cards */
+@media (max-width: 768px) {
+  .course-card {
+    min-width: 280px;
+    min-height: 220px;;
+  }
+}
+
+/* Fix Results slider cards */
+@media (max-width: 768px) {
+  .result-card {
+    min-width: 220px;
+  }
+}
+
+/* Fix Beyond Classroom grid */
+@media (max-width: 768px) {
+  .extra-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .video-card {
+    border-radius: 20px;
+  }
+}
+
+
+/* ===============================
+   CONTACT SECTION
+   =============================== */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-top: 50px;
+}
+
+/* FORM */
+.contact-form {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  padding: 40px;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--glass-border);
+  padding: 14px 16px;
+  border-radius: 10px;
+  color: var(--text-main);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: var(--text-dim);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--accent-gold);
+  box-shadow: 0 0 0 2px rgba(212,175,55,0.15);
+}
+
+.contact-form button {
+  margin-top: 10px;
+  background: var(--accent-gold);
+  color: #000;
+  border: none;
+  padding: 14px;
+  border-radius: 50px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  box-shadow: 0 0 25px var(--accent-glow);
+  transform: translateY(-2px);
+}
+
+/* MAP */
+.contact-map {
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid var(--glass-border);
+}
+
+.contact-map iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  border: none;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-map iframe {
+    min-height: 300px;
+  }
+}
+
+
+
+/* ===============================
+   NAVBAR DROPDOWN (DESKTOP)
+   =============================== */
+
+.nav-dropdown {
+  position: relative;
+}
+
+.dropdown-trigger {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dropdown-trigger i {
+  font-size: 0.7rem;
+  transition: transform 0.3s ease;
+}
+
+.dropdown-menu {
+  position: absolute;
+   top: 100%;
+  margin-top: 12px;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  background: rgba(10, 10, 11, 0.95);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: 14px;
+  min-width: 220px;
+  padding: 10px 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.35s ease;
+  z-index: 1200;
+}
+
+.dropdown-menu li {
+  list-style: none;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 12px 20px;
+  font-size: 0.85rem;
+  color: var(--text-main);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.dropdown-menu a:hover {
+  background: rgba(212, 175, 55, 0.08);
+  color: var(--accent-gold);
+}
+
+.nav-dropdown:hover .dropdown-menu {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+.nav-dropdown:hover .dropdown-trigger i {
+  transform: rotate(180deg);
+}
+
+.mobile-menu details {
+  text-align: center;
+}
+
+.mobile-menu summary {
+  list-style: none;
+  cursor: pointer;
+  font-family: 'Poppins';
+  font-size: 1.2rem;
+}
+
+.mobile-menu details a {
+  display: block;
+  margin-top: 10px;
+  font-size: 1rem;
+  color: var(--text-dim);
+}
+
+.nav-dropdown::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  height: 20px;
+}
+
+/* ===============================
+   ABOUT US – FINAL FIX
+   =============================== */
+
+.about-section {
+  background: linear-gradient(to bottom, #0a0a0b, #0f0f12);
+}
+
+/* GRID */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+/* LEFT CONTENT */
+.about-content h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 3rem;
+  line-height: 1.15;
+  margin-bottom: 25px;
+}
+
+.about-content h2 span {
+  color: var(--accent-gold);
+}
+
+.since-tag {
+  display: inline-block;
+  margin-bottom: 15px;
+  font-size: 0.85rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+  font-weight: 700;
+}
+
+.lead-para {
+  font-size: 1.1rem;
+  color: var(--text-main);
+  margin-bottom: 18px;
+}
+
+.about-content p {
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: var(--text-dim);
+  margin-bottom: 18px;
+}
+
+/* QUOTE BADGE */
+.vision-badge {
+  margin-top: 25px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 22px;
+  border-radius: 50px;
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  color: var(--accent-gold);
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.vision-badge i {
+  opacity: 0.6;
+}
+
+/* RIGHT STATS */
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.8rem;
+}
+
+/* STAT BOX */
+.stat-box {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  padding: 40px 25px;
+  text-align: center;
+  transition: all 0.4s ease;
+}
+
+.stat-box h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.4rem;
+  margin-bottom: 8px;
+  color: var(--text-main);
+}
+
+.stat-box p {
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--accent-gold);
+}
+
+.stat-box:hover {
+  transform: translateY(-8px);
+  border-color: var(--accent-gold);
+  box-shadow: 0 15px 40px var(--accent-glow);
+}
+
+/* PREMIUM HIGHLIGHT BOX */
+.stat-box.highlight-premium {
+  background: linear-gradient(
+    145deg,
+    rgba(212,175,55,0.25),
+    rgba(10,10,11,0.95)
+  );
+  border: 1px solid var(--accent-gold);
+}
+
+.stat-box.highlight-premium h3 {
+  color: var(--accent-gold);
+  text-shadow: 0 0 18px rgba(212,175,55,0.35);
+}
+
+.stat-box.highlight-premium p {
+  color: var(--text-main);
+  opacity: 0.9;
+}
+
+.hero {
+  padding-top: 120px;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .about-content h2 {
+    font-size: 2.4rem;
+  }
+
+  .about-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .about-stats {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+</style>
+</head>
+<body>
+
+   <nav>
+  <div class="logo">HS <span>TUTORIALS</span></div>
+
+  <!-- Desktop Links -->
+  <ul class="nav-links">
+    <li><a href="courses.html">Courses</a></li>
+    <li class="nav-dropdown">
+  <a href="#" class="dropdown-trigger">
+    Mentors <i class="fa-solid fa-chevron-down"></i>
+  </a>
+
+  <ul class="dropdown-menu">
+    <li><a href="mentors-hsc.html">College Mentors</a></li>
+    <li><a href="schl_clg.html">School mentors</a></li>
+  </ul>
+</li>
+
+    <li><a href="socials.html">Social</a></li>
+    <li><a href="testimonials.html">Testimonials</a></li>
+    <li><a href="gallrey.html">Gallery</a></li>
+  </ul>
+
+  <!-- Hamburger -->
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="courses.html">Courses</a>
+
+  <details>
+    <summary>Mentors</summary>
+    <a href="mentors-hsc.html">College Mentors</a>
+    <a href="schl_clg.html">School Mentors</a>
+  </details>
+
+  <a href="socials.html">Socials</a>
+  <a href="testimonials.html">Testimonials</a>
+  <a href="gallrey.html">Gallery</a>
+  <a href="courses.html" class="mobile-cta">Unlock Access</a>
+</div>
+
+
+    <header class="hero">
+        <h1>Elevate Your <br> Intellect.</h1>
+        <p>Premium education designed for the modern era. We don't just teach; we craft masters of the craft.</p>
+        <p style="display:none;">
+HS Tutorials offers SSC, HSC and College coaching in Mumbai with expert mentors, proven results, disciplined teaching, and modern learning spaces.
+</p>
+
+        <a href="#" class="cta-btn">Explore HS</a>
+    </header>
+<section class="section about-section" id="about">
+  <div class="section-header" style="text-align: center; margin-bottom: 60px;">
+    <h2 style="font-size: 3rem; font-family: 'Poppins';">About Us</h2>
+  </div>
+
+  <div class="about-grid">
+    <div class="about-content">
+      <span class="since-tag">Since 2016</span>
+      <h2>Crafting Academic <br><span>Excellence.</span></h2>
+      
+      <p class="lead-para">
+        For over nine years, HS Tutorials has been a trusted academic partner for students
+        and families across Mumbai. What began as a single classroom in 2016 has grown into
+        a multi-branch learning ecosystem built on discipline, clarity, and mentorship.
+      </p>
+
+      <p>
+        With <strong>1,000+ happy families</strong>, <strong>2,500+ students mentored</strong>, and a 
+        <strong>90%+ consistent success rate</strong>, HS Tutorials has earned its place as a benchmark in
+        quality education across SSC, HSC, and Graduation levels.
+      </p>
+
+      <p>
+        Backed by <strong>11+ expert mentors</strong>, <strong>25+ academic batches</strong>, and 
+        <strong>50+ events</strong>, we continue to deliver education rooted in values, clarity, and ambition.
+      </p>
+
+      <div class="vision-badge">
+        <i class="fa-solid fa-quote-left"></i>
+        <span>Quality Education with Values.</span>
+      </div>
+    </div>
+
+    <div class="about-stats">
+
+      <div class="stat-box"><h3>1000+</h3><p>Happy Families</p></div>
+      <div class="stat-box"><h3>2500+</h3><p>Students Mentored</p></div>
+      <div class="stat-box"><h3>9 Years</h3><p>Academic Excellence</p></div>
+
+      <div class="stat-box highlight-premium">
+        <h3>90%+</h3>
+        <p>Success Rate</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+    <section class="section">
+        <div class="section-title">
+            <h2>Our Specialized Tracks</h2>
+            <p style="color: var(--text-dim);">Curated content for those who demand excellence.</p>
+        </div>
+        
+        <div class="grid">
+            <div class="card">
+                <h3>Advanced Logic</h3>
+                <p>Master the fundamentals of high-level problem solving and algorithmic thinking.</p>
+            </div>
+            <div class="card">
+                <h3>Digital Wealth</h3>
+                <p>Understanding the modern economy, from social-aspects to global market trends.</p>
+            </div>
+            <div class="card">
+                <h3>Leadership Mastery</h3>
+                <p>Psychology-backed frameworks for managing elite teams and organizations.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="glimpse">
+  <div class="section-title">
+    <h2>Glimpse of HS</h2>
+    <p>A look inside our learning spaces and culture.</p>
+  </div>
+
+  <div class="glimpse-grid">
+
+    <!-- HS GALAXY -->
+    <div class="glimpse-card">
+      <div class="glimpse-video">
+        <video
+          src="img/vid1.mp4"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="none">
+        </video>
+
+      </div>
+
+      <div class="glimpse-content">
+        <h4>HS Galaxy Branch</h4>
+        <p>
+          A modern learning environment designed for focus, discipline, and
+          high-performance academic growth. Equipped with advanced classrooms
+          and an energetic student culture.
+        </p>
+      </div>
+    </div>
+
+    <!-- HS FIRDOUS -->
+    <div class="glimpse-card">
+      <div class="glimpse-video">
+        <video
+          src="img/vid2.mp4"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="none">
+        </video>
+      </div>
+
+      <div class="glimpse-content">
+        <h4>HS Firdous Branch</h4>
+        <p>
+          A calm and structured space focused on concept clarity and individual
+          mentoring, nurturing students through discipline and consistency.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+    <section class="section" style="background: #0d0d0f;" id="courses">
+        <div class="section-title">
+            <h2>Available Programs</h2>
+            <p>Select your path to academic excellence.</p>
+        </div>
+
+        <div class="courses-wrapper">
+            <button class="slider-btn" onclick="document.getElementById('courseSlider').scrollLeft -= 400"> < </button>
+
+            <div class="courses-grid" id="courseSlider">
+                <div class="course-card">
+                    <div class="course-image" style="background: url('https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=500&q=80') center/cover;"></div>
+                    <div class="course-content">
+                        <span class="course-tag">Higher Secondary</span>
+                        <h4>HSC Board</h4>
+                        <p style="color: var(--text-dim); margin-bottom: 20px;">Comprehensive coaching for Science & Commerce streams with specialized mock tests.</p>
+                        <a href="courses.html" class="know-more-btn">Details</a>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-image" style="background: url('https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=500&q=80') center/cover;"></div>
+                    <div class="course-content">
+                        <span class="course-tag">Secondary</span>
+                        <h4>SSC Board</h4>
+                        <p style="color: var(--text-dim); margin-bottom: 20px;">Building strong foundations for 10th-grade students with a focus on core concepts.</p>
+                        <a href="courses.html" class="know-more-btn">Details</a>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-image" style="background: url('img/primary.jpg') center/cover;"></div>
+                    <div class="course-content">
+                        <span class="course-tag">Primary & Secondary</span>
+                        <h4>1-9th</h4>
+                        <p style="color: var(--text-dim); margin-bottom: 20px;">Intensive Biology, Physics, and Chemistry modules , Helps set foundation and Scope.</p>
+                        <a href="courses.html" class="know-more-btn">Details</a>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-image" style="background: url('img/management.jpg') center/cover;"></div>
+                    <div class="course-content">
+                        <span class="course-tag">Management</span>
+                        <h4>BMS/B.com/BAF</h4>
+                        <p style="color: var(--text-dim); margin-bottom: 20px;">Mastering aptitude, logic, and management basics for top-tier Management placemets.</p>
+                        <a href="courses.html" class="know-more-btn">Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <button class="slider-btn" onclick="document.getElementById('courseSlider').scrollLeft += 400"> > </button>
+        </div>
+    </section>
+    <section class="section">
+        <div class="section-title">
+            <h2>The Architects of Success</h2>
+            <p>Learn from the minds that have mastered the industry.</p>
+        </div>
+
+        <div class="mentors-container">
+            <div class="mentor-card">
+                <div class="mentor-image-container">
+                    <img src="img/haidersir.jpeg" alt="Haider Sir">
+                </div>
+                <div class="mentor-info">
+                    <span>Co-Founder</span>
+                    <h3>Haider Sir</h3>
+                    <h4>Mcom, BMS-Finance</h4>
+                  <p class="mentor-bio">
+                    Skilled business mentor specializing in Strategy, Law , Economics , Financial Thinking, and Logical Reasoning, helping students apply core commerce concepts with confidence and clarity.
+                    </p>
+
+                    <div class="social-links">
+                        <a href="#">Instagram</a>
+                        <a href="#">YouTube</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="mentor-card">
+                <div class="mentor-image-container">
+                    <img src="img/saifsir.png" alt="Saif Sir">
+                </div>
+                <div class="mentor-info">
+                    <span>Co-Founder</span>
+                    <h3>Saif Sir</h3>
+                    <h4>MBA-Finance, Mcom, CA-IPCC</h4>
+                    <p class="mentor-bio">
+                      Experienced finance educator with 10+ years in Accounting, Corporate Finance, and Business Analysis, dedicated to simplifying complex concepts and strengthening students’ academic foundations.
+                    </p>
+
+                    <div class="social-links">  
+                        <a href="#">Instagram</a>
+                        <a href="#">YouTube</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="section" id="results">
+  <div class="section-title">
+    <h2>The Results We Deliver</h2>
+    <p>Proof of our commitment to academic brilliance.</p>
+  </div>
+
+  <!-- SSC RESULTS -->
+  <div class="results-container">
+    <h3 class="results-subheading">SSC Results</h3>
+
+    <div class="result-slider-wrapper">
+      <button class="slider-btn" onclick="scrollSlider('sscGrid', -320)">&#60;</button>
+
+      <div class="result-grid" id="sscGrid">
+        <div class="result-card" onclick="openLightbox('img/ssc1.jpeg')">
+          <img src="img/ssc1.jpeg" alt="SSC Result 1">
+        </div>
+        <div class="result-card" onclick="openLightbox('img/ssc2.jpeg')">
+          <img src="img/ssc2.jpeg" alt="SSC Result 2">
+        </div>
+        <div class="result-card" onclick="openLightbox('img/ssc3.jpeg')">
+          <img src="img/ssc3.jpeg" alt="SSC Result 3">
+        </div>
+        <div class="result-card" onclick="openLightbox('img/ssc4.jpeg')">
+          <img src="img/ssc4.jpeg" alt="SSC Result 4">
+        </div>
+        <div class="result-card" onclick="openLightbox('img/ssc5.jpeg')">
+          <img src="img/ssc5.jpeg" alt="SSC Result 5">
+        </div>
+        <div class="result-card" onclick="openLightbox('img/ssc6.jpeg')">
+          <img src="img/ssc6.jpeg" alt="SSC Result 6">
+        </div>
+      </div>
+
+      <button class="slider-btn" onclick="scrollSlider('sscGrid', 320)">&#62;</button>
+    </div>
+  </div>
+
+  <!-- HSC RESULTS -->
+  <div class="results-container">
+    <h3 class="results-subheading">HSC Results</h3>
+
+    <div class="result-slider-wrapper">
+      <button class="slider-btn" onclick="scrollSlider('hscGrid', -320)">&#60;</button>
+
+      <div class="result-grid" id="hscGrid">
+        <div class="result-card" onclick="openLightbox('img/hsc1.jpeg')">
+          <img src="img/hsc1.jpeg" alt="HSC Result 1">
+        </div>
+        <div class="result-card" onclick="openLightbox('img/hsc2.jpeg')">
+          <img src="img/hsc2.jpeg" alt="HSC Result 2">
+        </div>
+        <div class="result-card" onclick="openLightbox('img/hsc3.jpeg')">
+          <img src="img/hsc3.jpeg" alt="HSC Result 3">
+        </div>
+        <div class="result-card" onclick="openLightbox('img/hsc4.jpeg')">
+          <img src="img/hsc4.jpeg" alt="HSC Result 4">
+        </div>
+          <div class="result-card" onclick="openLightbox('img/hsc4.jpeg')">
+          <img src="img/hsc5.jpeg" alt="HSC Result 5">
+        </div>
+          <div class="result-card" onclick="openLightbox('img/hsc4.jpeg')">
+          <img src="img/hsc6.jpeg" alt="HSC Result 6">
+        </div>
+      </div>
+
+      <button class="slider-btn" onclick="scrollSlider('hscGrid', 320)">&#62;</button>
+    </div>
+  </div>
+</section>
+
+    <section class="section">
+        <div class="section-title">
+            <h2>The HS Inner Circle</h2>
+            <p>Real results from students who demanded more from their education.</p>
+        </div>
+
+        <div class="testimonials-container">
+            <div class="testimonial-card">
+                <span class="quote-icon">“</span>
+                <div class="student-info">
+                    <div class="student-img" style="background: url() center/cover;"></div>
+                    <div class="student-name">
+                        <h5>Nauman Baig</h5>
+                        <span>Student
+                        </span>
+                    </div>
+                </div>
+                <span class="stars">★★★★★</span>
+                <p class="testimonial-text">"The quality of teaching at HS Tutorials is unmatched. From being an SSC student to scoring confidently in my exams, the guidance and mentorship here truly set the gold standard"</p>
+            </div>
+
+            <div class="testimonial-card">
+                <span class="quote-icon">“</span>
+                <div class="student-info">
+                    <div class="student-img" style="background: url() center/cover;"></div>
+                    <div class="student-name">
+                        <h5>Shabnam Shama</h5>
+                        <span>Parent
+
+                        </span>
+                    </div>
+                </div>
+                <span class="stars">★★★★★</span>
+                <p class="testimonial-text">"HS Tutorials didn’t just help my son score well in his exams — they helped shape him into a disciplined, confident, and genuinely good human being. The growth I’ve seen in him, both academically and personally, is priceless."</p>
+            </div>
+
+            <div class="testimonial-card">
+                <span class="quote-icon">“</span>
+                <div class="student-info">
+                    <div class="student-img" style="background: url() center/cover;"></div>
+                    <div class="student-name">
+                        <h5>Namira</h5>
+                        <span>Student</span>
+                    </div>
+                </div>
+                <span class="stars">★★★★★</span>
+                <p class="testimonial-text">"I genuinely enjoyed studying at HS Tutorials. The teachers are super supportive, the environment is positive, and classes never felt boring. It made studying feel easier and more motivating"</p>
+            </div>
+        </div>
+    </section>
+
+   <section class="section" style="background: linear-gradient(to bottom, #0a0a0b, #151518);">
+  <div class="section-title">
+    <h2>Beyond the Classroom</h2>
+    <p>Culture, energy, and community at HS Tutorials.</p>
+  </div>
+
+  <div class="extra-grid">
+
+    <!-- VIDEO 1 -->
+    <a href="https://youtu.be/TCPUGYfo3Pk?si=4zfdFQHjH6IbbjhD"
+       target="_blank"
+       class="video-card">
+
+      <div class="video-wrapper"
+           style="background-image: url('img/uruj.png');">
+        <div class="play-trigger"></div>
+      </div>
+
+      <div class="video-card-content">
+        <p>Featured Event</p>
+        <h4>URUJ</h4>
+      </div>
+    </a>
+
+    <!-- VIDEO 2 -->
+    <a href="https://www.youtube.com/watch?v=HaIaKnJEVTU"
+       target="_blank"
+       class="video-card">
+
+      <div class="video-wrapper"
+           style="background-image: url('img/hunar.png');">
+        <div class="play-trigger"></div>
+      </div>
+
+      <div class="video-card-content">
+        <p>Annual Celebration</p>
+        <h4>Hunar</h4>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <div class="section-title">
+    <h2>Contact Us</h2>
+    <p>We’d love to guide you on your academic journey.</p>
+  </div>
+
+  <div class="contact-grid">
+
+    <!-- FORM -->
+   <form class="contact-form" onsubmit="sendToWhatsApp(event)">
+
+
+      <!-- Hidden FormSubmit Settings -->
+      <input type="text" id="name" placeholder="Your Name" required>
+<input type="email" id="email" placeholder="Email Address" required>
+<input type="tel" id="phone" placeholder="Phone Number">
+<textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+
+    <!-- MAP -->
+    <div class="contact-map">
+      <iframe
+  src="https://www.google.com/maps?q=Galaxy%20Apartments%20Qureshi%20Nagar%20Kurla%20East&output=embed"
+  allowfullscreen
+  loading="lazy">
+</iframe>
+    </div>
+
+  </div>
+</section>
+
+
+ <div data-include="components/footer.html"></div>
+
+    <!-- JS -->
+     <script src="js/nav.js"></script>
+    <script src="js/include.js"></script>
+
+
+<script>
+  function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('active');
+    document.querySelector('.hamburger').classList.toggle('active');
+  }
+
+  function scrollSlider(id, distance) {
+    const container = document.getElementById(id);
+    container.scrollBy({
+        left: distance,
+        behavior: 'smooth'
+    });
+}
+
+</script>
+
+<script>
+function sendToWhatsApp(e) {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const phone = document.getElementById("phone").value;
+  const message = document.getElementById("message").value;
+
+  const whatsappNumber = "919022323259"; // ← PUT YOUR NUMBER (no +)
+
+  const text =
+    `New Inquiry from HS Tutorials Website%0A%0A` +
+    `Name: ${name}%0A` +
+    `Email: ${email}%0A` +
+    `Phone: ${phone}%0A%0A` +
+    `Message:%0A${message}`;
+
+  const url = `https://wa.me/${whatsappNumber}?text=${text}`;
+  window.open(url, "_blank");
+}
+</script>
+
+
+<script>
+  function openLightbox(src) {
+    const box = document.getElementById('lightbox');
+    const img = document.getElementById('lightboxImg');
+    img.src = src;
+    box.classList.add('active');
+  }
+
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('active');
+  }
+
+  // Close when clicking outside image
+  document.getElementById('lightbox').addEventListener('click', e => {
+    if (e.target.id === 'lightbox') closeLightbox();
+  });
+
+  // Close on ESC
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeLightbox();
+  });
+</script>
+
+<div class="lightbox" id="lightbox">
+  <span class="lightbox-close" onclick="closeLightbox()">×</span>
+  <img id="lightboxImg" src="" alt="Result Preview">
+</div>
+
+</body>
+</html>
