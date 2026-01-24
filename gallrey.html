@@ -315,25 +315,35 @@
             line-height: 1.8;
         }
 
-        .umrah-card {
-            background: var(--glass);
-            border: 1px solid var(--accent-gold);
-            padding: 40px;
-            border-radius: 20px;
-            position: relative;
-            overflow: hidden;
-        }
+   
 
-        .umrah-card::before {
-            content: '95%';
-            position: absolute;
-            right: -20px;
-            top: -20px;
-            font-size: 8rem;
-            font-weight: 900;
-            color: rgba(212, 175, 55, 0.05);
-            font-family: 'Poppins';
-        }
+        
+        .umrah-card {
+    background: var(--glass);
+    border: 1px solid var(--accent-gold);
+    padding: 40px;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* NEW BACKGROUND IMAGE */
+.umrah-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("img/gallrey/madinah.png") center/cover no-repeat;
+    opacity: 0.40; /* 15% visibility – subtle & classy */
+    filter: blur(1px); /* Slight blur effect */
+    z-index: 0;
+}
+
+/* Make sure content stays above the blurred image */
+.umrah-card * {
+    position: relative;
+    z-index: 2;
+}
+
 
         .prize-image-box {
             width: 100%;
@@ -750,7 +760,7 @@
                     
                     <div style="margin-top: 25px; display: flex; align-items: center; gap: 15px;">
                         <div style="height: 1px; flex: 1; background: var(--glass-border);"></div>
-                        <span style="font-size: 0.9rem; color: var(--accent-gold); font-weight: 700;">CRITERIA: 95% IN SSC BOARDS</span>
+                        <span style="font-size: 0.9rem; color: var(--accent-gold); font-weight: 700;">CRITERIA: 95% IN SSC, HSC BOARDS & GRADUATION</span>
                         <div style="height: 1px; flex: 1; background: var(--glass-border);"></div>
                     </div>
                 </div>
@@ -863,7 +873,7 @@
     <section class="moments-section">
     <div class="soty-intro" style="text-align: center; margin: 0 auto 50px;">
         <span class="philosophy-tag">Raw & Unfiltered</span>
-        <h2>Moments of HS</h2>
+        <h2>Moments of Urooj</h2>
         <p>The small wins, the late-night grinds, and the friendships that last a lifetime.</p>
     </div>
 
